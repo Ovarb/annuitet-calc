@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-        docker { image 'maven:3.3.3' } 
+        docker { image 'imagenarium/maven:3.5-jdk-10-docker' } 
     }
     stages {
         stage('build') {
