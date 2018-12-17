@@ -11,6 +11,7 @@ pipeline {
         }
         stage('package') {
             steps {
+                sh export DOCKER_HOST=tcp://localhost:2375
                 sh 'mvn package docker:build'
             }
         }
