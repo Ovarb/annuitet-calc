@@ -8,7 +8,7 @@ public class CCalcRunner {
         Scanner sc = new Scanner(System.in);
 
         //enter sum and  installment
-        System.out.println("Enter Credit1 Sum");
+        System.out.println("Enter desirable (2) Sum");
         int inputSum = sc.nextInt();
 
         System.out.println("Enter comfortable payment per month");
