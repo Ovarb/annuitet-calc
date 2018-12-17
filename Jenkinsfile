@@ -11,7 +11,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                sh export DOCKER_HOST=tcp://127.0.0.1:2375
+                sh 'export DOCKER_HOST=tcp://127.0.0.1:2375'
                 sh 'mvn package docker:build'
             }
         }
