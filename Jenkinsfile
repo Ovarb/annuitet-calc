@@ -11,7 +11,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                sh 'DOCKER_HOST=tcp://127.0.0.1:2375'
+                sh 'DOCKER_HOST=unix:///var/run/docker.sock'
                 sh 'mvn package docker:build'
             }
         }
