@@ -11,7 +11,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                sm 'echo "123"'
+                sh 'echo "123"'
                 sh 'docker --version'
 
             }
