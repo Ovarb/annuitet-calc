@@ -11,6 +11,7 @@ pipeline {
         }
         stage('package') {
             steps {
+                sm 'echo "123"'
                 sh 'docker --version'
                 sh 'mvn package docker:build'
             }
