@@ -1,7 +1,8 @@
 pipeline {
     agent { 
         docker { 
-            image 'imagenarium/maven:3.5-jdk-10-docker'
+            image 'maven:3.3.3'
+            args '--mount "type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"'
         } 
     }
     stages {
