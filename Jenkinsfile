@@ -15,6 +15,7 @@ pipeline {
         stage('package') {
             steps {
                 sh 'echo "123"'
+                sh 'ls -l /var/run/docker.sock'
                 sh 'mvn clean package docker:build'
             }
         }
