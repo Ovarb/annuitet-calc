@@ -16,6 +16,8 @@ pipeline {
             steps {
                 sh 'DOCKER_HOST=unix:///var/run/docker.sock'
                 sh 'ls -l /var/run/docker.sock'
+                sh 'w'
+                sh 'groups'
                 sh 'mvn clean package docker:build'
             }
         }
