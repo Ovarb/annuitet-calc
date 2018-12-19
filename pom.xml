@@ -73,7 +73,6 @@
                 </dependency>
               </dependencies>
               <configuration>
-                <dockerHost>unix:///var/run/docker.sock</dockerHost>
                 <imageName>ovarb6/calc</imageName>
                 <baseImage>java</baseImage>
                 <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
