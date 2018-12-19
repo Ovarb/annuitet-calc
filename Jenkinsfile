@@ -15,7 +15,6 @@ pipeline {
         stage('package') {
             steps {
                 sh 'echo "123"'
-                sh 'docker --version'
                 sh 'mvn clean package docker:build'
             }
         }
