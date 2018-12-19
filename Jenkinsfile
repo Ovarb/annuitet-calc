@@ -14,9 +14,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                sh 'export DOCKER_HOST=unix:///var/run/docker.sock'
                 sh 'DOCKER_HOST=unix:///var/run/docker.sock'
-                sh 'echo $DOCKER_HOST'
                 sh 'ls -l /var/run/docker.sock'
                 sh 'mvn clean package docker:build'
             }
